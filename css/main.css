@@ -1,0 +1,99 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* header */
+    .header{
+        width: 100%;
+        background-color: #fff;
+        display: flex;
+        border: 1px solid red;
+        justify-content: space-between;
+        padding-right: 30px;
+    }
+
+    .header .logo{
+        margin: auto 0;
+        padding: 16px 30px;
+    }
+
+    .header .logo img{
+        width: 100%;
+        height: 100%;
+    }
+
+    .header form{
+        margin: auto 0;
+    }
+
+    .header form .input-text{
+        font-size: 15px;
+        line-height: 1.5;
+        padding: 4px;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+    }
+
+    .header form .input-submit{
+        font-size: 15px;
+        line-height: 1.5;
+        padding: 4px 8px;
+        margin-left: 20px;
+        background-color: brown;
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .header form .input-submit:active{
+        opacity: 0.6;
+        transform:scale(0.9);
+    }
+/* navigation */
+    .navigation{
+
+    }
+
+/* body */
+    .body{
+
+    }
+        /* side-bar */
+            .side-bar{
+
+            }
+
+        /* main */
+            .main{
+
+            }
+
+/* footer */
+    .footer{
+
+    }
+
+/* --------Responsive------- */
+
+    /* PC */
+    @media (max-width: 1024){
+        /* header */
+
+    }
+
+    /* Taplet */
+    @media (max-width: 1024){
+        /* header */
+
+    }
+
+    /* Mobile */
+    @media only scrren and (max-width: 740){
+        /* header */
+        .header{
+            background-color: chartreuse;
+        }
+    }
