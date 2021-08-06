@@ -4,14 +4,21 @@
     box-sizing: border-box;
 }
 
+html{
+    font-family:Arial, Helvetica, sans-serif;
+}
+
 /* header */
     .header{
         width: 100%;
         background-color: #fff;
         display: flex;
-        border: 1px solid red;
         justify-content: space-between;
         padding-right: 30px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
     }
 
     .header .logo{
@@ -34,9 +41,100 @@
         padding: 4px;
         border-radius: 6px;
         border: 1px solid #ccc;
+        width: 250px;
+    }
+
+    .header form .input-text:focus-visible{
+        outline: none;
+    }
+
+    .header form .input-text:focus-visible{
+        border: 2px solid rgb(189, 15, 15);
     }
 
     .header form .input-submit{
+        font-size: 15px;
+        line-height: 1.5;
+        padding: 4px 8px;
+        margin-left: 20px;
+        background-color: rgb(189, 15, 15);
+        color: #fff;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+    }
+
+    .header form .input-submit:active{
+        opacity: 0.6;
+        transform:scale(0.9);
+    }
+
+/* navigation */
+    .nav{
+        background: rgba(0, 0, 0, 0.8);
+        border-bottom: 4px solid rgb(189, 15, 15);
+        margin-top: 100px;
+        display: flex;
+        align-self: center;
+        justify-content: space-between;
+    }
+
+    .nav i{
+        color: #fff;
+        font-size: 30px;
+        vertical-align: middle;
+        margin: 12px;
+        display: none;
+    }
+
+    .nav ul{
+        display: flex;
+        align-self: center;
+        list-style: none;
+    }
+
+    .nav ul li{
+
+    }
+
+    .nav ul li:hover{
+        background: rgb(189, 15, 15);
+    }
+
+    .nav ul li a{
+        display: block;
+        text-decoration: none;
+        text-transform: uppercase;
+        font-size: 15px;
+        line-height: 1.5;
+        color: #fff;
+        font-weight: 500;
+        padding: 10px 20px;
+    }
+
+    .nav form{
+        display: none;
+        align-self: center;
+        padding-right: 30px;
+    }
+
+    .nav form .input-text{
+        font-size: 15px;
+        line-height: 1.5;
+        border-radius: 6px;
+        border: 1px solid #ccc;
+        width: 250px;
+    }
+
+    .nav form .input-text:focus-visible{
+        outline: none;
+    }
+
+    .nav form .input-text:focus-visible{
+        border: 2px solid rgb(189, 15, 15);
+    }
+
+    .nav form .input-submit{
         font-size: 15px;
         line-height: 1.5;
         padding: 4px 8px;
@@ -48,13 +146,9 @@
         cursor: pointer;
     }
 
-    .header form .input-submit:active{
+    .nav form .input-submit:active{
         opacity: 0.6;
         transform:scale(0.9);
-    }
-/* navigation */
-    .navigation{
-
     }
 
 /* body */
@@ -79,21 +173,52 @@
 /* --------Responsive------- */
 
     /* PC */
-    @media (max-width: 1024){
+    @media only screen and (max-width: 1024px){
         /* header */
 
     }
 
     /* Taplet */
-    @media (max-width: 1024){
+    @media only screen and (max-width: 1024px){
         /* header */
-
-    }
-
+        .header{
+            background-color: rgb(217, 255, 0);
+        }
+        
     /* Mobile */
-    @media only scrren and (max-width: 740){
+    @media only screen and (max-width: 740px){
         /* header */
         .header{
             background-color: chartreuse;
+            display: flex;
+            justify-content: center;
+        }
+
+        .header .logo{
+            padding: 8px 10px;
+        }
+
+        .header form .input-text,
+        .header form .input-submit{
+            display: none;
+        }
+
+
+        /* navigation */
+        .nav{
+            margin-top: 84px;
+            display: flex;
+        }
+
+        .nav i{
+            display: block;
+        }
+
+        .nav ul{
+            display: none;
+        }
+
+        .nav form{
+            display: flex;
         }
     }
