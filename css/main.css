@@ -19,6 +19,7 @@ html{
         top: 0;
         left: 0;
         right: 0;
+        z-index: 1;
     }
 
     .header .logo{
@@ -71,12 +72,17 @@ html{
 
 /* navigation */
     .nav{
-        background: rgba(0, 0, 0, 0.8);
+        background: rgb(32, 25, 25);
         border-bottom: 4px solid rgb(189, 15, 15);
         margin-top: 100px;
         display: flex;
         align-self: center;
         justify-content: space-between;
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 1;
     }
 
     .nav i{
@@ -139,7 +145,7 @@ html{
         line-height: 1.5;
         padding: 4px 8px;
         margin-left: 20px;
-        background-color: brown;
+        background-color: rgb(189, 15, 15);
         color: #fff;
         border: none;
         border-radius: 4px;
@@ -153,8 +159,66 @@ html{
 
 /* body */
     .body{
-
+        margin-top: 146px;
     }
+
+        /* banner */
+        .banner{
+            padding-top: 30.703125%;
+            background: url('/images/bn.png') no-repeat center / contain;
+            position: relative;
+        }
+
+        .banner .banner-title{
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            left: 0;
+            padding-left: 50px;
+            color: #fff;
+
+            
+        }
+
+        .banner .banner-title h3{
+            font-size: 24px;
+            font-weight: 400;
+            line-height: 2.0;
+            width: 100%;
+        }
+
+        .banner .banner-title p{
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 1.6;
+            display: inline-block;
+            padding: 10px 0;
+            width: 100%;
+        }
+
+        .banner .banner-title .banner-btn{
+            background-color: rgb(189, 15, 15);
+            width: 80px;
+            border-radius: 4px;
+            margin-top: 12px;
+        }
+
+        .banner .banner-title .banner-btn:hover{
+            cursor: pointer;
+        }
+
+        .banner .banner-title .banner-btn:active{
+            opacity: 0.6;
+            transform:scale(0.9);
+        }
+
+        .banner .banner-title .banner-btn p{
+            text-align: center;
+            width: 100%;
+            font-size: 15px;
+            padding: 4px 0;
+        }
+
         /* side-bar */
             .side-bar{
 
@@ -162,7 +226,8 @@ html{
 
         /* main */
             .main{
-
+                height: 2000px;
+                background: #ccc;
             }
 
 /* footer */
@@ -172,7 +237,7 @@ html{
 
 /* --------Responsive------- */
 
-    /* PC */
+   /* PC */
     @media only screen and (max-width: 1024px){
         /* header */
 
@@ -184,7 +249,7 @@ html{
         .header{
             background-color: rgb(217, 255, 0);
         }
-        
+
     /* Mobile */
     @media only screen and (max-width: 740px){
         /* header */
@@ -221,4 +286,10 @@ html{
         .nav form{
             display: flex;
         }
+
+        /* banner */
+        .banner .banner-title{
+            display: none;
+        }
+    }
     }
