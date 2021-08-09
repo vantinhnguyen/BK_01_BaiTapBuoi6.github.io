@@ -99,10 +99,6 @@ html{
         list-style: none;
     }
 
-    .nav ul li{
-
-    }
-
     .nav ul li:hover{
         background: rgb(189, 15, 15);
     }
