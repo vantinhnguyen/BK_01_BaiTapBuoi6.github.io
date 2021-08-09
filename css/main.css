@@ -223,12 +223,12 @@ html{
 
         /* side-bar */
             .side-bar{
-                width: 25%;
+                width: 20%;
                 padding-top: 8px;
             }
 
             .side-bar .image{
-                padding: 8px 0;
+                padding: 8px 8px 8px 0;
             }
             
             .side-bar .image img{
@@ -238,22 +238,23 @@ html{
 
         /* main */
             .main{
-                width: 75%;
-                padding: 0 8px;
+                width: 80%;
                 background: #fff;
             }
 
-            .main>h3{
-                /* display: block; */
+            .main .phan-loai{
+                display: flex;
+                justify-content: center;
+            }
+
+            .main .phan-loai h3{
+                display: inline-block;
                 text-align: center;
                 padding: 16px 0 0 0;
-                margin: 0 auto;
                 margin-bottom: 16px;
                 font-size: 16px;
                 font-weight: 500;
                 line-height: 1.5;
-                width: 80px;
-                height: auto;
                 border-bottom: 2px solid rgb(189, 15, 15);
             }
 
@@ -265,15 +266,20 @@ html{
             }
 
             .main .list-sp .san-pham{
-                width: 33.33333%;
-                padding: 8px;
+                width: 32%;
                 border: 1px solid #ccc;
+                margin-bottom: 16px;
+            }
+
+            .main .list-sp .san-pham:hover{
+                box-shadow: 0 0 10px rgba(189, 15, 15, 0.8);
+                transform: scale(1.01);
+                transition: 0.2s;
             }
 
             .main .list-sp .san-pham img{
+                display: block;
                 width: 100%;
-                height: 100%;
-                vertical-align: middle;
             }
 
             .main .list-sp .san-pham p{
@@ -282,12 +288,22 @@ html{
                 font-weight: 500;
                 padding: 8px 0;
                 text-align: center;
-                vertical-align: middle;
             }
 
             .main .xem-them{
                 background: rgb(189, 15, 15);
-                width: 80px;
+                width: 100px;
+                border-radius: 4px;
+                margin: 0 auto 12px;
+            }
+
+            .main .xem-them:active{
+                opacity: 0.6;
+                transform:scale(0.9);
+            }
+            
+            .main .xem-them:hover{
+                cursor: pointer;
             }
 
             .main .xem-them p{
@@ -295,11 +311,43 @@ html{
                 line-height: 1.5;
                 font-weight: 500;
                 color: #fff;
+                padding: 4px;
+                width: 100%;
+                text-align: center;
             }
 
 /* footer */
     .footer{
+        width: 100%;
+        display: flex;
+        background: rgb(32, 25, 25);
+        color: #fff;
+        padding: 20px 50px;
+    }
 
+    .footer h3{
+        font-size: 20px;
+        padding-bottom: 16px;
+    }
+
+    .footer .info{
+        margin-right: 50px;
+    }
+
+    .footer .info p{
+        font-size: 16px;
+        line-height: 2;
+    }
+
+    .footer .info i{
+        display: inline-block;
+        font-size: 16px;
+        padding-right: 16px;
+    }
+
+    .footer .show .anh img{
+        margin-right: 16px;
+        margin-bottom: 16px;
     }
 
 /* --------Responsive------- */
@@ -307,6 +355,9 @@ html{
    /* PC có màn hình độ phân giải thấp*/
     @media only screen and (min-width: 1024px) and (max-width: 1239px){
         /* header */
+        .header{
+            background-color: rgb(43, 225, 238);
+        }
 
         /* body */
         .body{
@@ -326,6 +377,35 @@ html{
         .body{
             max-width: 650px;
         }
+            /* side-bar */
+            .side-bar{
+                width: 25%;
+            }
+
+            /* main */
+            .main{
+                width: 75%;
+            }
+
+            .main .list-sp .san-pham{
+                width: 48%;
+            }
+
+        /* footer */
+        .footer{
+            flex-wrap: wrap;
+        }
+
+        .footer .info,
+        .footer .show{
+            width: 100%;
+            padding-left: 100px;
+        }
+        
+        .footer .info{
+            margin-bottom: 20px;
+        }
+
     }
     /* Mobile */
     @media only screen and (min-width: 320px) and (max-width: 739px){
@@ -379,5 +459,23 @@ html{
             /* main */
             .main{
                 width: 100%;
+                margin: 0 8px;
             }
+
+            .main .list-sp .san-pham{
+                width: 48%;
+            }
+
+        /* footer */
+        .footer{
+            padding-left: 8px;
+        }
+
+        .footer .show{
+            display: none;
+        }
+        
+        .footer .info{
+            margin-bottom: 20px;
+        }
     }
